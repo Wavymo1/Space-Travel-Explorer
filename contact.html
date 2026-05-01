@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Mohamed Allsayed">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Mission | Space Travel Explorer</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-mark">✦</span><span>Space Travel Explorer</span></a>
+      <button class="nav-toggle" type="button" aria-controls="navLinks" aria-expanded="false">Menu</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Explorer</a></li>
+        <li><a href="about.html">About Mission</a></li>
+        <li><a href="contact.html">Join Mission</a></li>
+        <li><a href="sources.html">Sources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="arrival-layout">
+        <article class="panel">
+          <p class="eyebrow">Mission Signup</p>
+          <h1>Join a space route</h1>
+          <p class="lead">
+            This form demonstrates client-side validation. Try submitting it with missing information and JavaScript will
+            show a dialog explaining what needs to be fixed.
+          </p>
+
+          <form id="missionForm" class="form-grid" novalidate>
+            <div class="form-row">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-row">
+              <label for="planet">Favorite Planet</label>
+              <select id="planet" name="planet" required>
+                <option value="">Select a planet</option>
+                <option>Mercury</option>
+                <option>Venus</option>
+                <option>Earth</option>
+                <option>Mars</option>
+                <option>Jupiter</option>
+                <option>Saturn</option>
+                <option>Uranus</option>
+                <option>Neptune</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="mission">Mission Type</label>
+              <select id="mission" name="mission" required>
+                <option value="">Select a mission type</option>
+                <option>Research</option>
+                <option>Exploration</option>
+                <option>Photography</option>
+                <option>Colony Planning</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="notes">Mission Message</label>
+              <textarea id="notes" name="notes" placeholder="Write why you want to join this mission." required></textarea>
+            </div>
+
+            <button class="btn" type="submit">Submit Mission Request</button>
+            <p class="form-message" id="formMessage" aria-live="polite"></p>
+          </form>
+        </article>
+
+        <aside class="planet-stage saturn" aria-label="Saturn mission visual">
+          <div class="rings" aria-hidden="true"></div>
+          <div class="planet-sphere" style="--planet-texture: url('images/textures/saturn.jpg'); --planet-glow: rgba(255, 220, 142, .55);" role="img" aria-label="Rotating Saturn visual"></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Space Travel Explorer — Join Mission</p>
+      <p><a href="sources.html">Sources & credits</a></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

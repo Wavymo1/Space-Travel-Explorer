@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420" role="img" aria-label="silver spacecraft">
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#a7f6ff"/><stop offset="0.45" stop-color="#fff"/><stop offset="1" stop-color="#78a7ff"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<path d="M210 22 C260 106 288 181 299 319 C260 294 232 283 210 284 C188 283 160 294 121 319 C132 181 160 106 210 22Z" fill="url(#g)" stroke="#bdf8ff" stroke-width="4" filter="url(#glow)"/>
+<ellipse cx="210" cy="150" rx="38" ry="54" fill="#06192d" stroke="#6bf4ff" stroke-width="5"/>
+<path d="M147 246 L67 350 L154 312 Z" fill="#5f83c7" stroke="#bdf8ff" stroke-width="3"/>
+<path d="M273 246 L353 350 L266 312 Z" fill="#5f83c7" stroke="#bdf8ff" stroke-width="3"/>
+<path d="M177 312 C190 338 230 338 243 312 L232 383 L210 403 L188 383 Z" fill="#ff9f1c" stroke="#ffe5a4" stroke-width="3"/>
+</svg>

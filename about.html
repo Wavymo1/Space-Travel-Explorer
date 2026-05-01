@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Mohamed Allsayed">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Mission | Space Travel Explorer</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-mark">✦</span><span>Space Travel Explorer</span></a>
+      <button class="nav-toggle" type="button" aria-controls="navLinks" aria-expanded="false">Menu</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Explorer</a></li>
+        <li><a href="about.html">About Mission</a></li>
+        <li><a href="contact.html">Join Mission</a></li>
+        <li><a href="sources.html">Sources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="panel">
+        <p class="eyebrow">Project Overview</p>
+        <h1>About the mission</h1>
+        <p class="lead">
+          Space Travel Explorer is an interactive multimedia web application built for CS430 Internet Multimedia Programming.
+          The site lets users choose a planet, travel through a full-screen animated starfield, and arrive at a futuristic
+          dashboard with rotating planet visuals and NASA-sourced facts.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Design Process</p>
+          <h2>How the experience works</h2>
+          <p>
+            The design is built around the feeling of a space cockpit. Instead of simply clicking a button and seeing text,
+            the user goes through a launch, warp travel, arrival, and dashboard reveal.
+          </p>
+        </div>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>1. Destination Selection</h3>
+          <p>Users select a planet card. Each card includes a small rotating planet preview and a short mission label.</p>
+        </article>
+        <article class="feature-card">
+          <h3>2. Space Travel</h3>
+          <p>JavaScript starts a canvas-based warp animation with star streaks, velocity data, progress, and signal status.</p>
+        </article>
+        <article class="feature-card">
+          <h3>3. Planet Dashboard</h3>
+          <p>The page updates the large rotating planet, mission facts, and source link using DOM manipulation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="arrival-layout">
+        <div class="planet-stage">
+          <div class="planet-sphere" style="--planet-texture: url('images/textures/jupiter.jpg'); --planet-glow: rgba(240, 188, 118, .55);" role="img" aria-label="Rotating Jupiter visual"></div>
+        </div>
+        <article class="panel">
+          <p class="eyebrow">Technologies Used</p>
+          <h2>HTML, CSS, JavaScript, Canvas, Images, Audio</h2>
+          <p class="lead">
+            This project uses semantic HTML for structure, external CSS for responsive layout and visual design,
+            JavaScript for interactivity, a canvas element for the travel effect, planet texture images for multimedia,
+            and a local audio file for the cockpit atmosphere.
+          </p>
+          <div class="data-grid">
+            <div class="data-card"><span>HTML</span><strong>Semantic pages</strong></div>
+            <div class="data-card"><span>CSS</span><strong>Responsive HUD design</strong></div>
+            <div class="data-card"><span>JavaScript</span><strong>Launch + validation</strong></div>
+            <div class="data-card"><span>Canvas</span><strong>Warp starfield</strong></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="panel">
+        <p class="eyebrow">Accessibility & Usability</p>
+        <h2>Built for a clear user experience</h2>
+        <p class="lead">
+          The website includes semantic landmarks, readable contrast, keyboard-friendly buttons and links, alt text,
+          a skip link, audio controls, visible focus states, and reduced-motion support for users who prefer less animation.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Space Travel Explorer — About Mission</p>
+      <p><a href="sources.html">Sources & credits</a></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

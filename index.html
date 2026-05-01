@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Mohamed Allsayed">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Travel Explorer | Interactive Solar System Mission</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Space Travel Explorer home">
+        <span class="brand-mark">✦</span>
+        <span>Space Travel Explorer</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-controls="navLinks" aria-expanded="false">Menu</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Explorer</a></li>
+        <li><a href="about.html">About Mission</a></li>
+        <li><a href="contact.html">Join Mission</a></li>
+        <li><a href="sources.html">Sources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div>
+        <p class="eyebrow">Mission Control // Solar System Route Active</p>
+        <h1 id="heroTitle">Travel through space without leaving the screen.</h1>
+        <p class="lead">
+          Choose a planet, enter a full-screen warp corridor, and arrive at a futuristic dashboard with
+          rotating almost-3D planet visuals, mission data, ambient audio, and NASA-backed sources.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#destinations">Select Destination</a>
+          <button class="btn secondary" type="button" id="randomLaunch">Random Launch</button>
+        </div>
+      </div>
+
+      <aside class="cockpit" aria-label="Spacecraft cockpit preview">
+        <div class="orbit-rings" aria-hidden="true"></div>
+        <div class="ship-card">
+          <div class="ship-card-inner">
+            <img src="images/spaceship.svg" alt="Silver spacecraft ready for launch">
+            <div class="hud-readout">
+              <div class="readout">
+                <span>Route</span>
+                <strong id="routeStatus">EARTH ROUTE ACTIVE</strong>
+              </div>
+              <div class="readout">
+                <span>System</span>
+                <strong>Warp Ready</strong>
+              </div>
+              <div class="readout">
+                <span>Status</span>
+                <strong id="missionStatus">Awaiting Launch</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" aria-labelledby="audioTitle">
+      <div class="panel audio-panel">
+        <div>
+          <p class="eyebrow">Multimedia System</p>
+          <h2 id="audioTitle">Ambient cockpit audio</h2>
+          <p class="lead">
+            Play the original space ambience to make the mission feel like a real cockpit experience.
+            The audio file is included locally so the project stays self-contained.
+          </p>
+        </div>
+        <audio controls loop>
+          <source src="audio/space-ambient.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </section>
+
+    <section class="section" id="destinations" aria-labelledby="destTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Destination Terminal</p>
+          <h2 id="destTitle">Select a planet to begin travel</h2>
+          <p>
+            Pick a destination and the page handles the launch sequence: the starfield speeds up,
+            the selected planet comes into view, and the dashboard switches to that planet's data.
+          </p>
+        </div>
+      </div>
+      <div id="destinationGrid" class="destination-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="section" id="arrivalDashboard" aria-labelledby="dashboardTitle">
+      <div class="arrival-layout">
+        <div class="planet-stage" id="planetStage">
+          <div class="saturn-rings saturn-rings-back" aria-hidden="true"></div>
+          <div class="planet-sphere" id="planetSphere" role="img" aria-label="Rotating realistic visual of Earth">
+            <div class="surface-strip" aria-hidden="true">
+              <img id="planetTextureA" src="images/textures/earth.jpg" alt="">
+              <img id="planetTextureB" src="images/textures/earth.jpg" alt="">
+            </div>
+          </div>
+          <div class="saturn-rings saturn-rings-front" aria-hidden="true"></div>
+        </div>
+
+        <article class="panel">
+          <p class="eyebrow">Arrival Dashboard</p>
+          <h2 id="dashboardTitle"><span id="planetTitle">Earth</span></h2>
+          <p class="lead" id="planetSubtitle">3rd planet from the Sun • Ocean world with life</p>
+
+          <div class="data-grid">
+            <div class="data-card">
+              <span>Diameter</span>
+              <strong id="diameterValue">7,926 miles</strong>
+            </div>
+            <div class="data-card">
+              <span>Length of Day</span>
+              <strong id="dayValue">24 hours</strong>
+            </div>
+            <div class="data-card">
+              <span>Length of Year</span>
+              <strong id="yearValue">365.25 days</strong>
+            </div>
+            <div class="data-card">
+              <span>Atmosphere</span>
+              <strong id="atmosphereValue">Nitrogen and oxygen</strong>
+            </div>
+          </div>
+
+          <p class="mission-note" id="planetNote">
+            Earth is the only planet currently known to support life and stable surface liquid water.
+          </p>
+
+          <p class="source-line">
+            Fact source:
+            <a id="planetSource" href="https://science.nasa.gov/earth/facts/" target="_blank" rel="noopener">
+              NASA fact source for Earth
+            </a>.
+            Full source credits are listed on the <a href="sources.html">Sources page</a>.
+          </p>
+
+          <div class="control-row">
+            <a class="btn" href="#destinations">Choose Another Planet</a>
+            <a class="btn ghost" id="planetSourceInline" href="https://science.nasa.gov/earth/facts/" target="_blank" rel="noopener">Open NASA Source</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="quizTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">User Interaction Component</p>
+          <h2 id="quizTitle">Mission knowledge check</h2>
+          <p>This short quiz adds another interactive component beyond the planet launcher and form validation.</p>
+        </div>
+      </div>
+
+      <div class="quiz-grid">
+        <article class="quiz-card">
+          <h3>Question</h3>
+          <p>Which planet is commonly known as the Red Planet?</p>
+          <div class="quiz-options" role="group" aria-label="Quiz answer choices">
+            <button type="button" data-answer="venus">Venus</button>
+            <button type="button" data-answer="mars">Mars</button>
+            <button type="button" data-answer="jupiter">Jupiter</button>
+            <button type="button" data-answer="neptune">Neptune</button>
+          </div>
+          <p id="quizResult" aria-live="polite"></p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Canvas Starfield</h3>
+          <p>The travel scene uses a JavaScript canvas to draw moving star streaks, creating a stronger “flying through space” effect.</p>
+        </article>
+
+        <article class="feature-card">
+          <h3>Rotating Planets</h3>
+          <p>Each planet uses a local texture map inside a shaded circular frame, giving the page a rotating globe effect while keeping the site fast enough to run in a browser.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="travel-overlay" id="travelOverlay" aria-hidden="true" role="dialog" aria-label="Space travel animation">
+    <canvas id="warpCanvas" aria-hidden="true"></canvas>
+    <div class="arrival-saturn-ring arrival-saturn-ring-back" aria-hidden="true"></div>
+    <div class="arrival-orb" id="arrivalOrb" aria-hidden="true">
+      <div class="surface-strip" aria-hidden="true">
+        <img id="arrivalTextureA" src="images/textures/earth.jpg" alt="">
+        <img id="arrivalTextureB" src="images/textures/earth.jpg" alt="">
+      </div>
+    </div>
+    <div class="arrival-saturn-ring arrival-saturn-ring-front" aria-hidden="true"></div>
+    <div class="warp-vignette" aria-hidden="true"></div>
+    <div class="warp-hud">
+      <div class="warp-top">
+        <div class="warp-panel">
+          <span>Destination</span>
+          <strong id="warpDestination">LOCKED: EARTH</strong>
+          <div class="progress-track" aria-hidden="true">
+            <div class="progress-fill" id="warpProgress"></div>
+          </div>
+        </div>
+        <button class="btn ghost" type="button" id="skipArrival">Skip Arrival</button>
+      </div>
+
+      <div></div>
+
+      <div class="warp-bottom">
+        <div class="warp-panel">
+          <span>Travel Stage</span>
+          <strong id="warpStage">Ignition sequence</strong>
+        </div>
+        <div class="warp-panel">
+          <span>Velocity</span>
+          <strong id="warpVelocity">0 km/s</strong>
+        </div>
+        <div class="warp-panel">
+          <span>Signal</span>
+          <strong id="warpSignal">Searching</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Space Travel Explorer — CS430 Internet Multimedia Programming Final Project</p>
+      <p><a href="sources.html">Sources & credits</a></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
