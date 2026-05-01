@@ -30,13 +30,7 @@ Space Travel Explorer is a CS430 multimedia website where the user chooses a pla
 - Accessibility features such as semantic tags, skip link, readable contrast, focus states, labels, and reduced-motion support
 
 ## Live Website Link
-Add the GitHub Pages link here after deployment.
-
-Example:
-`https://githubusername.github.io/cs430-final-group-spacetravel/`
+(https://wavymo1.github.io/Space-Travel-Explorer/)
 
 ## Sources
 All factual sources and media notes are listed in `sources.html`.
-
-## Opening Note
-Extract the ZIP before opening `index.html`. If the file is opened while it is still inside the ZIP, the browser may not load the CSS, JavaScript, images, or audio correctly.
