@@ -74,6 +74,7 @@ The project is organized so it can be uploaded to GitHub with a clean folder str
 
 ## Individual Contributions
 - Mohamed Allsayed: Completed the working version of the project, including the concept, HTML pages, CSS design, JavaScript functionality, travel animation, planet dashboard, form validation, quiz, source page, README, and final report.
+- Mohammad Aboubakr: Helped with Animation and presantation.
 
 
 ## Sources
